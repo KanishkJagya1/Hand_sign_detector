@@ -5,16 +5,23 @@ import numpy as np
 import math
 import time
 import os
+import sys
+
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__ if '__file__' in locals() else sys.argv0))
 
 detector = HandDetector(maxHands=1)
 cap = cv2.VideoCapture(0)
 
-classifier = Classifier("./python/model/keras_model.h5", "./python/model/labels.txt")
+# Construct the full paths to the model and labels using os.path.join
+model_path = os.path.join(script_dir, "python", "model", "keras_model.h5")
+labels_path = os.path.join(script_dir, "python", "model", "labels.txt")
+
+classifier = Classifier(model_path, labels_path)
 offset = 20
 imageSize = 300
 
-folder = "./python/data/C"  # Provide the full path to your data folder
-counter = 0
+folder = os.path.join(script_dir, "python", "data", "C")  # Construct the full path
 
 if not os.path.exists(folder):
     os.makedirs(folder)
