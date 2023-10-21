@@ -5,13 +5,13 @@ from tensorflow.keras.preprocessing.image import ImageDataGenerator
 import os
 
 # Define your project's directory structure
-project_dir = "./python"
-train_dir = os.path.join(project_dir, "train")
-val_dir = os.path.join(project_dir, "validation")
-model_path = os.path.join(project_dir, "model", "your_custom_model.h5")
+project_dir = "./python"  # Replace with your project directory
+train_dir = os.path.join(project_dir, "./data/C")  # Data folder with subdirectories A, B, C
+val_dir = os.path.join(project_dir, "./data/C")  # You can use the same data folder for validation
+model_path = os.path.join(project_dir, "model", "keras_model.h5")
 
 # Parameters
-input_shape = (224, 224)
+input_shape = (224, 224, 3)  
 batch_size = 32
 num_classes = 3  # Number of classes (A, B, C)
 
@@ -33,7 +33,7 @@ train_generator = train_data_gen.flow_from_directory(
     batch_size=batch_size,
     class_mode="categorical")
 
-# Load validation data
+# Load validation data (You can set up a separate validation dataset if needed)
 validation_data_gen = ImageDataGenerator(rescale=1./255)
 validation_generator = validation_data_gen.flow_from_directory(
     val_dir,
