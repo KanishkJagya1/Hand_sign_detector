@@ -1,6 +1,6 @@
 # Hand Sign Recognition Tracker for Video Conferences
 
-![Hand Sign Recognition Tracker](your_image_url_here)
+![Hand Sign Recognition Tracker](https://www.tookitaki.com/hubfs/Compliance%20Hub%20Home%20Page%20Images/Articles/What%20is%20KYC%20Remediation_.jpg)
 
 **Table of Contents**
 - [Introduction](#introduction)
