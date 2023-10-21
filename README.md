@@ -35,7 +35,7 @@ To get started with this project, you'll need to install the necessary dependenc
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/yourusername/hand-sign-tracker.git
+   git clone https://github.com/KanishkJagya1/openCV-project.git
    ```
 
 2. Install the required libraries and dependencies:
