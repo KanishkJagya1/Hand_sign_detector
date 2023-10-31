@@ -30,7 +30,7 @@ while True:
         # Resize imgCrop to match imgWhite's dimensions
         imgCrop = cv2.resize(imgCrop, (imageSize, imageSize))
 
-        aspect_ratio = w / h  # Calculate aspect ratio
+        aspect_ratio = w / h 
 
         if aspect_ratio > 1:
             # If the width is greater than the height
